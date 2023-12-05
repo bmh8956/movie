@@ -52,7 +52,7 @@ public class Common {
 
 	// ver2
 	// ver1(정수 + 대소문자)의 String 구성 -> ver2(선택)
-	// ch :
+	// ch ->
 	// ver1 = "a", 대소문자(정수x) = "up&low", 소문자 = "low", 대문자 = "up"
 	public static List<Object> autoObject(int a, Object ob, int b, int d, String ch) throws IllegalAccessException, InstantiationException {
 		Class<?> c = ob.getClass();
