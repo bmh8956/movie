@@ -42,7 +42,9 @@ public class MovieMenu {
 				mv.setDirector(sc.nextLine());
 				System.out.println();
 				System.out.print("등급을 입력해주세요 : ");
-				mv.setGrade(Integer.parseInt(sc.next().replaceAll("[^0-9]", "0")));
+				int grade = Integer.parseInt(sc.next().replaceAll("[^0-9]", "0"));
+				grade = (grade > 0)? grade : (int) (Math.random() * 20) + 1;
+				mv.setGrade(grade);
 				sc.nextLine();
 				System.out.println();
 				System.out.print("장르를 입력해주세요 : ");
@@ -52,7 +54,7 @@ public class MovieMenu {
 				mmr.add(mv);
 
 				// 테스트용
-				List<Object> lo = Common.autoObject(10, mv, 5, 10);
+				List<Object> lo = Common.autoObject(10, mv, 5, 10, "low");
 				for (Object k : lo) {
 					mmr.add((Movie) k);
 				}
